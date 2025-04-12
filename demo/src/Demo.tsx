@@ -26,7 +26,7 @@ const Demo = () => {
     >
       <Paper elevation={3} sx={{padding: 4, width: 500, textAlign: "center"}}>
         <Typography variant="h5" gutterBottom color="primary">
-          useCountry Hook Demo
+          useCountry
         </Typography>
         <Divider />
         {loading && <CircularProgress />}
