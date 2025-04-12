@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 
 const Demo = () => {
-  const {country, error, loading, fetchCountryBasedOnLocation} = useCountry();
+  const {country, error, loading, getCountryByIP} = useCountry();
 
   return (
     <Box
@@ -21,6 +21,7 @@ const Demo = () => {
         height: "100vh",
         padding: 4,
         backgroundColor: "#f5f5f5",
+        boxSizing: "border-box",
       }}
     >
       <Paper elevation={3} sx={{padding: 4, width: 500, textAlign: "center"}}>
@@ -81,8 +82,11 @@ const Demo = () => {
           <Button
             variant="contained"
             color="primary"
-            onClick={fetchCountryBasedOnLocation}
+            onClick={getCountryByIP}
             disabled={loading}
+            sx={{
+              textTransform: "none",
+            }}
             fullWidth
           >
             Fetch Your Country Again

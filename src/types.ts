@@ -4,5 +4,5 @@ export interface UseCountryResult {
   country: Country | undefined;
   error: Error | undefined;
   loading: boolean;
-  fetchCountryBasedOnLocation: () => Promise<void>;
+  getCountryByIP: () => Promise<void>;
 }

@@ -9,7 +9,7 @@ const useCountry = (): UseCountryResult => {
   const [error, setError] = useState<Error>();
   const [loading, setLoading] = useState<boolean>(true);
 
-  const fetchCountryBasedOnLocation = useCallback(async () => {
+  const getCountryByIP = useCallback(async () => {
     setLoading(true);
     try {
       const res = await fetch(API_COUNTRY_IS);
@@ -27,10 +27,10 @@ const useCountry = (): UseCountryResult => {
   }, []);
 
   useEffect(() => {
-    fetchCountryBasedOnLocation();
-  }, [fetchCountryBasedOnLocation]);
+    getCountryByIP();
+  }, [getCountryByIP]);
 
-  return {country, error, loading, fetchCountryBasedOnLocation};
+  return {country, error, loading, getCountryByIP};
 };
 
 export default useCountry;
