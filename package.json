@@ -1,0 +1,67 @@
+{
+  "name": "use-country",
+  "description": "React hook that retrieves user's country. Completely free for commercial use.",
+  "author": "Theo Sim",
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && babel src --out-dir dist --copy-files",
+    "demo": "npm run build && cd demo && npm run dev"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theo-sim-dev/use-country"
+  },
+  "homepage": "https://github.com/theo-sim-dev/use-country",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.0",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@eslint/js": "^9.24.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "country-list-with-dial-code-and-flag": "^5.1.0",
+    "eslint": "^9.24.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-hook",
+    "react-hooks",
+    "hook",
+    "hooks",
+    "geolocation",
+    "country",
+    "geolocation-api",
+    "country-api",
+    "location",
+    "country-code",
+    "country-name",
+    "country-flag",
+    "country-dial-code",
+    "country-list",
+    "country-is",
+    "country-js",
+    "custom-hook",
+    "use-country",
+    "use-country-hook"
+  ]
+}
