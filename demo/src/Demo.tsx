@@ -10,7 +10,9 @@ import {
 } from "@mui/material";
 
 const Demo = () => {
-  const {country, error, loading, getCountryByIP} = useCountry();
+  const {country, error, loading, getCountryByIP} = useCountry({
+    fallback: "FR", // Fallback to France if the IP lookup fails.
+  });
 
   return (
     <Box
@@ -29,10 +31,14 @@ const Demo = () => {
           useCountry
         </Typography>
         <Divider />
-        {loading && <CircularProgress />}
-        {error && <Typography color="error">Error: {error.message}</Typography>}
+        <Box sx={{mt: 2}}>
+          {loading && <CircularProgress />}
+          {error && (
+            <Typography color="error">Error: {error.message}</Typography>
+          )}
+        </Box>
         {!loading && country && (
-          <Box sx={{marginTop: 2, textAlign: "left"}}>
+          <Box sx={{mt: 2, textAlign: "left"}}>
             <Typography variant="h6">
               You're currently in: {country.name} {country.flag}
             </Typography>

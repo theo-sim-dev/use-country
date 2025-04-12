@@ -6,3 +6,7 @@ export interface UseCountryResult {
   loading: boolean;
   getCountryByIP: () => Promise<void>;
 }
+
+export interface UseCountryProps {
+  fallback?: string; // Renamed from defaultCountryCode
+}
