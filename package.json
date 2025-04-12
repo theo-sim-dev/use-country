@@ -2,7 +2,7 @@
   "name": "use-country",
   "description": "Detect your visitor's country! A lightweight React hook that determines a country using the IP address.",
   "author": "Theo Sim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
