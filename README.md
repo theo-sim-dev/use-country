@@ -7,20 +7,20 @@
 
 📍**Detect your visitor's country!**
 
-`useCountry` is a lightweight React hook that determines a country using the IP address via [Country.is API](https://country.is/). It also provides a suite of powerful utilities for managing country-related data.
+`useCountry` is a lightweight React hook that determines a country using the IP address via [Country.is](https://country.is/) API. It also provides a suite of powerful utilities for managing country-related data.
 
-[Country.is](https://country.is/) is completely free for both personal and commercial use, and so is `useCountry`.
+Country.is is completely free for both personal and commercial use, and so is `useCountry`.
 
 ## Demo
 
 <!-- TODO: link to codepen, after the official release -->
-![Edit mui-alert-provider demo](https://codesandbox.io/static/img/play-codesandbox.svg)
+[![Edit mui-alert-provider demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/use-country-demo-52pvzy)
 
 ## Features
 
-[Country.is](https://country.is/) is a free IP-to-country geolocation API that returns a visitor's country based on their IP address. It has been reliably operating for over a decade. For more information about usage limits and capabilities, please [visit the website](https://country.is/).
+[Country.is](https://country.is/) is a free IP-to-country geolocation API that returns a visitor's country based on their IP address. It has been reliably operating for over a decade. For more information about usage limits and capabilities, please visit the website.
 
-This package also utilizes `country-list-with-dial-code-and-flag`, which is another cool library containing lots of useful methods to deal with countries. Please [visit their npm](https://www.npmjs.com/package/country-list-with-dial-code-and-flag) for more information.
+This package also utilizes `country-list-with-dial-code-and-flag`, which is another cool library containing lots of useful methods to deal with countries. Please visit their [npm](https://www.npmjs.com/package/country-list-with-dial-code-and-flag) for more information.
 
 ## Installation
 
@@ -35,6 +35,8 @@ yarn add use-country
 ```
 
 ## Usage
+
+[Check out this playground](https://codesandbox.io/p/sandbox/use-country-demo-52pvzy) 🎮
 
 To use the `useCountry` hook, simply import it into your React component and call it. The hook provides the detected country, loading state, error (if any), and a method to manually fetch the country again.
 
@@ -68,11 +70,6 @@ const App = () => {
 
 export default App;
 ```
-
-<!--
-[Check out this playground](
-https://codesandbox.io/p/sandbox/mui-alert-provider-demo-kj6mjz) 🎮
--->
 
 ## API
 
