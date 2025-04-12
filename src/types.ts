@@ -8,5 +8,5 @@ export interface UseCountryResult {
 }
 
 export interface UseCountryProps {
-  fallback?: string; // Renamed from defaultCountryCode
+  fallback?: string; // ISO 3166-1 alpha-2 country code. e.g., "US".
 }
