@@ -7,31 +7,30 @@
 
 📍**Detect your visitor's country!**
 
-`useCountry` is a lightweight React hook that determines a country using the IP address via [Country.is](https://country.is/) API. It also provides a suite of powerful utilities for managing country-related data.
+`useCountry` is a lightweight React hook that determines a country using the IP address via [Country.is](https://country.is/) API.
 
 Country.is is completely free for both personal and commercial use, and so is `useCountry`.
 
 ## Demo
 
-<!-- TODO: link to codepen, after the official release -->
 [![Edit mui-alert-provider demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/use-country-demo-52pvzy)
 
 ## Features
 
 [Country.is](https://country.is/) is a free IP-to-country geolocation API that returns a visitor's country based on their IP address. It has been reliably operating for over a decade. For more information about usage limits and capabilities, please visit the website.
 
-This package also utilizes `country-list-with-dial-code-and-flag`, which is another cool library containing lots of useful methods to deal with countries. Please visit their [npm](https://www.npmjs.com/package/country-list-with-dial-code-and-flag) for more information.
+This package relies on `country-list-with-dial-code-and-flag`, which is another cool library containing lots of useful methods to deal with countries. Please visit their [npm](https://www.npmjs.com/package/country-list-with-dial-code-and-flag) for more information.
 
 ## Installation
 
 ```bash
-npm install use-country
+npm install use-country country-list-with-dial-code-and-flag
 ```
 
 or
 
 ```bash
-yarn add use-country
+yarn add use-country country-list-with-dial-code-and-flag
 ```
 
 ## Usage
@@ -90,22 +89,11 @@ export default App;
 | `loading`          | `boolean`                     | A boolean indicating whether the country detection is in progress.          |
 | `getCountryByIP`   | `() => Promise<void>`         | A method to manually retry fetching the country.                            |
 
-### Helpers
-
-| Function                     | Type                                   | Description                                                                 |
-|------------------------------|----------------------------------------|-----------------------------------------------------------------------------|
-| `getAllCountries`            | `(option?: FilterOption) => Country[]` | Retrieves all countries, optionally filtered by a specific option.          |
-| `findOneByCountryCode`       | `(code: string) => Country \| undefined` | Finds a single country by its ISO country code.                             |
-| `findOneByDialCode`          | `(dialCode: string) => Country \| undefined` | Finds a single country by its dial code.                                    |
-| `findByCountryCode`          | `(code: string, option?: FilterOption) => Country[]` | Finds all countries matching the given ISO country code.                    |
-| `findByDialCode`             | `(dialCode: string) => Country[]`      | Finds all countries matching the given dial code.                           |
-| `findByKeyword`              | `(keyword: string, option?: FilterOption) => Country[]` | Finds countries matching the given keyword.                                 |
-| `findByCurrencyCode`         | `(code: string, option?: FilterOption) => Country[]` | Finds countries by currency code.                                           |
-| `findOneByCurrencyCode`      | `(currencyCode: string) => Country \| undefined` | Finds a single country by its currency code.                                |
-
 ### Important types and interfaces
 
 #### `Country`
+
+Exposed directly from `country-list-with-dial-code-and-flag`. Please refer to their official [documentation](https://zin-kyaw-kyaw.gitbook.io/country-flags/usage#country) for more details.
 
 | Property         | Type     | Description                                                   |
 |------------------|----------|---------------------------------------------------------------|
