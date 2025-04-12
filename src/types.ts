@@ -6,3 +6,7 @@ export interface UseCountryResult {
   loading: boolean;
   getCountryByIP: () => Promise<void>;
 }
+
+export interface UseCountryProps {
+  fallback?: string; // ISO 3166-1 alpha-2 country code. e.g., "US".
+}

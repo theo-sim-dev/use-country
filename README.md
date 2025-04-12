@@ -38,14 +38,14 @@ yarn add use-country
 
 [Check out this playground](https://codesandbox.io/p/sandbox/use-country-demo-52pvzy) 🎮
 
-To use the `useCountry` hook, simply import it into your React component and call it. The hook provides the detected country, loading state, error (if any), and a method to manually fetch the country again.
+Simply import `useCountry` into your React component. The hook provides the detected country, loading state, error (if any), and a method to manually fetch the country again.
 
 ```tsx
 import React from "react";
 import { useCountry } from "use-country";
 
 const App = () => {
-  const { country, loading, error, getCountryByIP } = useCountry();
+  const { country, loading, error, getCountryByIP } = useCountry({ fallback: "US" });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
@@ -75,14 +75,20 @@ export default App;
 
 ### `useCountry` hook
 
-Returns `UseCountryResult`
+#### Receives `UseCountryProps`
 
-| Properties   | Type                          | Description                                                                 |
-|-------------------|-------------------------------|-----------------------------------------------------------------------------|
-| `country`         | `Country \| undefined`        | A detected `Country` object. `undefined` if no country is detected.     	|
-| `error`           | `Error \| undefined`          | An error object if an error occurs during the fetch process. `undefined` if there is no error.|
-| `loading`         | `boolean`                     | A boolean indicating whether the country detection is in progress.          |
-| `getCountryByIP`  | `() => Promise<void>`         | A method to manually retry fetching the country.                            |
+| Properties | Type                  | Description                                                                 |
+|------------|-----------------------|-----------------------------------------------------------------------------|
+| `fallback` | `string \| undefined` | An optional ISO country code to use as a fallback if the API call fails. e.g., "FR" |
+
+#### Returns `UseCountryResult`
+
+| Properties         | Type                          | Description                                                                 |
+|--------------------|-------------------------------|-----------------------------------------------------------------------------|
+| `country`          | `Country \| undefined`        | A detected `Country` object. `undefined` if no country is detected.     	|
+| `error`            | `Error \| undefined`          | An error object if an error occurs during the fetch process. `undefined` if there is no error.|
+| `loading`          | `boolean`                     | A boolean indicating whether the country detection is in progress.          |
+| `getCountryByIP`   | `() => Promise<void>`         | A method to manually retry fetching the country.                            |
 
 ### Helpers
 
